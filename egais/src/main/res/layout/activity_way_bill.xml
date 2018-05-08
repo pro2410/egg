@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/way_bill_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:fitsSystemWindows="true"
+    tools:context=".presentation.waybill.WayBillActivity">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light"/>
+
+    </android.support.design.widget.AppBarLayout>
+
+    <LinearLayout
+        android:id="@+id/ll"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <android.support.v4.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fillViewport="true"
+            android:scrollbars="none">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:id="@+id/date_section"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:background="@color/way_bill_section_background"
+                    android:fontFamily="@font/roboto_regular"
+                    android:gravity="center|start"
+                    android:orientation="vertical"
+                    android:paddingEnd="16dp"
+                    android:paddingStart="16dp"
+                    android:textColor="@android:color/black"
+                    tools:text="Пт, 14.06.2017"/>
+
+                <include
+                    layout="@layout/item_way_bill"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/date_section"/>
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:id="@+id/barcodes_section"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_below="@id/item_way_bill"
+                    android:layout_marginTop="12dp"
+                    android:background="@color/way_bill_section_background"
+                    android:fontFamily="@font/roboto_light"
+                    android:gravity="center|start"
+                    android:orientation="vertical"
+                    android:paddingEnd="16dp"
+                    android:paddingStart="16dp"
+                    android:text="@string/way_bill_barcode_section"
+                    android:textColor="@android:color/black"
+                    tools:text="Штрих-коды"/>
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/barcode_list"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/barcodes_section"
+                    android:overScrollMode="never"
+                    tools:itemCount="10"
+                    tools:listitem="@layout/item_barcode"/>
+
+                <TextView
+                    android:id="@+id/smart_droid_hint"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/barcodes_section"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="18dp"
+                    android:fontFamily="@font/roboto_regular"
+                    android:gravity="center_horizontal"
+                    android:text="@string/way_bill_smart_droid_hint"
+                    android:textColor="@android:color/black"
+                    android:visibility="gone"
+                    tools:visibility="visible"/>
+            </RelativeLayout>
+        </android.support.v4.widget.NestedScrollView>
+    </LinearLayout>
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_margin="16dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:visibility="gone"
+        app:backgroundTint="@color/colorPrimary"
+        app:layout_anchor="@id/ll"
+        app:layout_anchorGravity="bottom|end"
+        app:srcCompat="@drawable/ic_fab"
+        app:useCompatPadding="true"/>
+
+
+    <include layout="@layout/fragment_scanned_result"/>
+
+</android.support.design.widget.CoordinatorLayout>

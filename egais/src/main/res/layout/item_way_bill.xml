@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/item_way_bill"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <android.support.v7.widget.AppCompatTextView
+        android:id="@+id/way_bill_number"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:fontFamily="@font/roboto_regular"
+        android:paddingEnd="16dp"
+        android:paddingStart="16dp"
+        android:paddingTop="8dp"
+        android:textColor="@android:color/black"
+        android:textSize="16sp"
+        tools:text="1234567890"/>
+
+    <ImageView
+        android:id="@+id/icon_account"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/way_bill_number"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="4dp"
+        app:srcCompat="@drawable/ic_account"/>
+
+    <android.support.v7.widget.AppCompatTextView
+        android:id="@+id/way_bill_org"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/way_bill_number"
+        android:layout_toEndOf="@id/icon_account"
+        android:fontFamily="@font/roboto_regular"
+        android:includeFontPadding="false"
+        android:paddingEnd="16dp"
+        android:paddingStart="0dp"
+        android:textColor="@android:color/black"
+        android:textSize="16sp"
+        tools:text="ООО “Россельхоз и ветеринария оленеводство для оленей и норковые норки для дилетантов”"/>
+
+    <android.support.v7.widget.AppCompatTextView
+        android:id="@+id/way_bill_time_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/way_bill_org"
+        android:fontFamily="@font/roboto_light"
+        android:paddingEnd="16dp"
+        android:paddingStart="16dp"
+        android:paddingBottom="12dp"
+        android:textColor="@android:color/black"
+        android:text="@string/time_title"/>
+
+    <android.support.v7.widget.AppCompatTextView
+        android:id="@+id/way_bill_time"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@id/way_bill_org"
+        android:layout_toEndOf="@id/way_bill_time_title"
+        android:fontFamily="@font/roboto_light"
+        android:gravity="end"
+        android:paddingEnd="16dp"
+        android:paddingStart="16dp"
+        android:textColor="@android:color/black"
+        tools:text="12:20"/>
+
+    <View
+        android:id="@+id/notification_divider"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@id/way_bill_time_title"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="4dp"
+        android:background="@color/item_divider" />
+</RelativeLayout>

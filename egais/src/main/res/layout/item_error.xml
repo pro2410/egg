@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:id="@+id/error_page_loading"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="?attr/listPreferredItemHeight"
+    android:background="@color/colorPrimary"
+    android:orientation="horizontal">
+
+    <android.support.v7.widget.AppCompatTextView
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:padding="16dp"
+        android:text="@string/error_page_loading"
+        android:textColor="@android:color/white"
+        />
+
+    <android.support.v7.widget.AppCompatButton
+        android:id="@+id/retry_page_loading_btn"
+        style="@style/ItemErrorRetryButton"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="center_vertical"
+        android:layout_marginEnd="16dp"
+        android:text="@string/retry"
+        />
+</LinearLayout>

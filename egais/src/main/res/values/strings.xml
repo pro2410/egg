@@ -1,0 +1,55 @@
+<resources>
+    <!-- Menu -->
+    <string name="menu_qr_login_title">По логину</string>
+
+    <!-- Scanned -->
+    <string name="scanned_label">Отсканированные</string>
+
+    <!-- Drawer -->
+    <string name="drawer_open">открыт</string>
+    <string name="drawer_close">закрыт</string>
+    <string name="drawer_header_identification">Идентификатор ФСРАР</string>
+    <string name="drawer_header_inn">ИНН</string>
+    <string name="drawer_header_kpp">КПП</string>
+    <string name="drawer_way_bills">Накладные</string>
+    <string name="drawer_log_out">Выйти</string>
+
+    <!--Error Dialog-->
+    <string name="dialog_positive_btn">Принять</string>
+
+    <!--Errors-->
+    <string name="error_server_connection">Ошибка соединения с сервером</string>
+    <string name="error_network">Проверьте своё интернет соединение</string>
+    <string name="error_input">Неверные имя пользователя или пароль</string>
+
+    <!-- Way Bills Screen -->
+    <string name="way_bills_label">Накладные</string>
+    <string name="way_bills_empty_text">На данный момент\nу вас нет ни одной накладной</string>
+    <string name="time_title">Время</string>
+    <string name="error_page_loading">Не удалось загрузить данные</string>
+    <string name="retry">Повторить</string>
+    <string name="retry_load">Повторить</string>
+
+    <!-- Way Bill Screen -->
+    <string name="way_bill_label">Накладная</string>
+    <string name="way_bill_time">Время</string>
+    <string name="way_bill_barcode_section">Штрихкоды</string>
+    <string name="way_bill_scan_result_error">Не удалось получить данные</string>
+    <string name="way_bill_smart_droid_hint">На данный момент список пуст. \nНачните сканировать штрихкоды \nс помощью вашего устройства.</string>
+
+    <!-- Scanner Screen -->
+    <string name="scanner_title">Сканер штрихкода</string>
+    <string name="qr_code_scan_hint">Чтобы сканировать штрихкод, поместите его в центр видоискателя</string>
+    <string name="qr_code_scan_header">Вход по QR-коду</string>
+    <string name="error_reading_barcode">Неверный QR-код</string>
+    <string name="camera_permission_explain">Чтобы войти, используя QR-код, предоставьте приложению доступ к камере</string>
+    <string name="btn_request_camera">Включить</string>
+
+    <!-- Success Screen -->
+    <string name="scanner_result_success_title">Готово</string>
+    <string name="scanner_result_success_text">Товар успешно отсканирован\nи добавлен в список</string>
+    <!-- Error Screen -->
+    <string name="scanner_result_error_title">ОШИБКА</string>
+    <string name="scanner_result_error_text">Не удалось отсканировать \nПовторите попытку</string>
+    <string name="menu_scanner">Фонарик</string>
+</resources>

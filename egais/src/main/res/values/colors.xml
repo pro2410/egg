@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#228acd</color>
+    <color name="colorPrimaryDark">#2b80cf</color>
+    <color name="colorAccent">#0066cc</color>
+
+    <color name="white">#FFFFFF</color>
+
+    <color name="way_bill_section_background">#f5f5f5</color>
+
+    <color name="progress_background">#67000000</color>
+
+    <color name="item_date_background">#f5f5f5</color>
+    <color name="item_divider">#e3e3e3</color>
+
+    <color name="item_divider_color">#80979797</color>
+    <color name="scanned_result_success">#228acd</color>
+    <color name="scanned_result_error">#f1545a</color>
+
+    <color name="itemListSelected">#33228acd</color>
+</resources>
